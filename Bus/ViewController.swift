@@ -22,6 +22,11 @@ var colors = ["TrafficJam":UIColor.blue, "OutOfService":UIColor.red, "SubDriver"
 
 class ViewController: UIViewController,CLLocationManagerDelegate {
   
+//animation==Hello
+    
+    
+    
+    
     @IBOutlet weak var mapView: GMSMapView!
     var locationManager = CLLocationManager()
     var currentLoc:Location = Location(lat:0, long:0)
@@ -34,6 +39,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.view.addSubview(mapView!)
 
         mapView.settings.myLocationButton = true
@@ -144,8 +150,6 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
         
     }
     
-   
-
     
 }
 

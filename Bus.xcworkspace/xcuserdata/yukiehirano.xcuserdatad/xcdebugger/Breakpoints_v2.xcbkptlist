@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bus/EntryViewController.swift"
+            timestampString = "532197695.359884"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "EntryViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bus.EntryViewController.eLabel.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UILabel&gt;"
+                  moduleName = "Bus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yukiehirano/Desktop/DojoAssignments/iOS/swift_project/bus/Bus/EntryViewController.swift"
+                  timestampString = "532197350.088983"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "92">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bus.EntryViewController.eLabel.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UILabel&gt;"
+                  moduleName = "Bus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yukiehirano/Desktop/DojoAssignments/iOS/swift_project/bus/Bus/EntryViewController.swift"
+                  timestampString = "532197350.094964"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "96">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bus.EntryViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; Bus.EntryViewController"
+                  moduleName = "Bus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yukiehirano/Desktop/DojoAssignments/iOS/swift_project/bus/Bus/EntryViewController.swift"
+                  timestampString = "532197350.098763"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "196">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bus.EntryViewController.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;Bus.EntryViewController&gt;"
+                  moduleName = "Bus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yukiehirano/Desktop/DojoAssignments/iOS/swift_project/bus/Bus/EntryViewController.swift"
+                  timestampString = "532197350.101677"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "152">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
