@@ -20,7 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         GMSServices.provideAPIKey("AIzaSyAF7Mvf9W1m0CZkwUJoy_6Uy39xw0AWe4w")
         GMSServices.provideAPIKey("AIzaSyAF7Mvf9W1m0CZkwUJoy_6Uy39xw0AWe4w")
-        
+        let container = NSPersistentContainer(name: "Bus")
+        print(container.persistentStoreDescriptions.first?.url)
         return true
     }
 

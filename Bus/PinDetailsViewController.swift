@@ -8,47 +8,34 @@
 
 import UIKit
 import CoreData
+import GoogleMaps
 
 class PinDetailsViewController: UIViewController {
 
     var pins = [Pin]()
+    var delegate:PinDelegate?
+    
+    
     let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     @IBOutlet weak var pinTable: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchPins()
 
+        pinTable.dataSource = self
+        pinTable.delegate = self
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
 
-    func fetchPins() {
-        
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Pin")
-        do {
-            let results = try (managedObjectContext.fetch(request))
-            
-            pins = results as! [Pin]
-            print("Got results count \(results.count)")
-        } catch {
-            print("\(error)")
-        }
-        
-    }
-    
 
 }
 
-extension PinDetailsViewController: UITableViewDataSource, UITabBarDelegate {
+extension PinDetailsViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print("cont \(pins.count)")
         return pins.count
         
     }
@@ -58,8 +45,15 @@ extension PinDetailsViewController: UITableViewDataSource, UITabBarDelegate {
         
         cell.textLabel?.text = pins[indexPath.row].type
         cell.detailTextLabel?.text = "ABC"
-        print("type: \(pins[indexPath.row])")
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        print("pindetails: remove pin")
+        let pin = pins[indexPath.row]
+        pins.remove(at: indexPath.row)
+        delegate?.deletePin(pin: pin)
+        tableView.reloadData()
     }
 
 }

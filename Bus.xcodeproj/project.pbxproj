@@ -9,8 +9,11 @@
 /* Begin PBXBuildFile section */
 		1315A6D31FB69188004F7E3D /* PinDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1315A6D21FB69188004F7E3D /* PinDetailsViewController.swift */; };
 		133247C71FB6882B00DEDE43 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133247C61FB6882B00DEDE43 /* EntryViewController.swift */; };
+		13C3A8DC1FB7C53F00E79F96 /* bus-stop-pointer.png in Resources */ = {isa = PBXBuildFile; fileRef = 13C3A8DB1FB7C53F00E79F96 /* bus-stop-pointer.png */; };
+		13C3A8DE1FB7E30D00E79F96 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C3A8DD1FB7E30D00E79F96 /* Data.swift */; };
+		13C3A8E01FB818EC00E79F96 /* PinDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C3A8DF1FB818EC00E79F96 /* PinDelegate.swift */; };
 		13C3B8331FB5400400BBA4A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C3B8321FB5400400BBA4A0 /* AppDelegate.swift */; };
-		13C3B8351FB5400400BBA4A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C3B8341FB5400400BBA4A0 /* ViewController.swift */; };
+		13C3B8351FB5400400BBA4A0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C3B8341FB5400400BBA4A0 /* MapViewController.swift */; };
 		13C3B8381FB5400400BBA4A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13C3B8361FB5400400BBA4A0 /* Main.storyboard */; };
 		13C3B83B1FB5400400BBA4A0 /* Bus.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 13C3B8391FB5400400BBA4A0 /* Bus.xcdatamodeld */; };
 		13C3B83D1FB5400400BBA4A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13C3B83C1FB5400400BBA4A0 /* Assets.xcassets */; };
@@ -42,9 +45,12 @@
 /* Begin PBXFileReference section */
 		1315A6D21FB69188004F7E3D /* PinDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinDetailsViewController.swift; sourceTree = "<group>"; };
 		133247C61FB6882B00DEDE43 /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
+		13C3A8DB1FB7C53F00E79F96 /* bus-stop-pointer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bus-stop-pointer.png"; sourceTree = "<group>"; };
+		13C3A8DD1FB7E30D00E79F96 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		13C3A8DF1FB818EC00E79F96 /* PinDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinDelegate.swift; sourceTree = "<group>"; };
 		13C3B82F1FB5400400BBA4A0 /* Bus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13C3B8321FB5400400BBA4A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		13C3B8341FB5400400BBA4A0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		13C3B8341FB5400400BBA4A0 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		13C3B8371FB5400400BBA4A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		13C3B83A1FB5400400BBA4A0 /* Bus.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bus.xcdatamodel; sourceTree = "<group>"; };
 		13C3B83C1FB5400400BBA4A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -56,7 +62,7 @@
 		13C3B8511FB5400400BBA4A0 /* BusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		13C3B8551FB5400400BBA4A0 /* BusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusUITests.swift; sourceTree = "<group>"; };
 		13C3B8571FB5400400BBA4A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		13C3B8631FB5449900BBA4A0 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		13C3B8631FB5449900BBA4A0 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		13C3B8651FB6356500BBA4A0 /* sign_stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sign_stop.png; sourceTree = "<group>"; };
 		67620757C32B05F1C8346123 /* Pods_Bus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C581DFDACAAECBDD3B26675 /* Pods-Bus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bus/Pods-Bus.debug.xcconfig"; sourceTree = "<group>"; };
@@ -124,10 +130,13 @@
 			isa = PBXGroup;
 			children = (
 				13C3B8321FB5400400BBA4A0 /* AppDelegate.swift */,
-				13C3B8341FB5400400BBA4A0 /* ViewController.swift */,
+				13C3B8341FB5400400BBA4A0 /* MapViewController.swift */,
+				13C3A8DF1FB818EC00E79F96 /* PinDelegate.swift */,
+				13C3A8DD1FB7E30D00E79F96 /* Data.swift */,
 				13C3B8361FB5400400BBA4A0 /* Main.storyboard */,
 				1315A6D21FB69188004F7E3D /* PinDetailsViewController.swift */,
 				133247C61FB6882B00DEDE43 /* EntryViewController.swift */,
+				13C3A8DB1FB7C53F00E79F96 /* bus-stop-pointer.png */,
 				13C3B83C1FB5400400BBA4A0 /* Assets.xcassets */,
 				13C3B8651FB6356500BBA4A0 /* sign_stop.png */,
 				13C3B83E1FB5400400BBA4A0 /* LaunchScreen.storyboard */,
@@ -274,6 +283,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13C3A8DC1FB7C53F00E79F96 /* bus-stop-pointer.png in Resources */,
 				13C3B8401FB5400400BBA4A0 /* LaunchScreen.storyboard in Resources */,
 				13C3B83D1FB5400400BBA4A0 /* Assets.xcassets in Resources */,
 				13C3B8641FB5449900BBA4A0 /* Podfile in Resources */,
@@ -325,11 +335,15 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Bus/Pods-Bus-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/GooglePlacesSearchController/GooglePlacesSearchController.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GooglePlacesSearchController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -362,10 +376,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				13C3B83B1FB5400400BBA4A0 /* Bus.xcdatamodeld in Sources */,
+				13C3A8DE1FB7E30D00E79F96 /* Data.swift in Sources */,
 				133247C71FB6882B00DEDE43 /* EntryViewController.swift in Sources */,
-				13C3B8351FB5400400BBA4A0 /* ViewController.swift in Sources */,
+				13C3B8351FB5400400BBA4A0 /* MapViewController.swift in Sources */,
 				13C3B8331FB5400400BBA4A0 /* AppDelegate.swift in Sources */,
 				1315A6D31FB69188004F7E3D /* PinDetailsViewController.swift in Sources */,
+				13C3A8E01FB818EC00E79F96 /* PinDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
