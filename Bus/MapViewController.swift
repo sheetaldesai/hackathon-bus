@@ -26,15 +26,31 @@ var delayMarkers = [Pin:GMSMarker]()
 
 var stops = [[37.297643,-122.006752],[37.300775,-122.019745],[37.303494, -122.022544],[37.308968, -122.009182],[37.299199, -122.014922]]
 
+
+
 class MapViewController: UIViewController,CLLocationManagerDelegate {
   
+    
+    @IBOutlet weak var trafficClick: UIButton!
+    @IBOutlet weak var oosClick: UIButton!
+    @IBOutlet weak var subdriverClick: UIButton!
+    
+    @IBOutlet weak var delay15: UIButton!
+    @IBOutlet weak var delay30: UIButton!
+    @IBOutlet weak var delay45: UIButton!
+    
     @IBOutlet weak var mapView: GMSMapView!
     var locationManager = CLLocationManager()
     var currentLoc:Location = Location(lat:0, long:0)
     let COORDINATE_OFFSET:Double = 1;
     
     var myRoute:Int32 = 1
+    var isParent = false
     
+    var mydelay = 0
+    var myam:Bool = true
+    
+    @IBOutlet var delayButtons: [UIButton]!
     
     override func viewDidLoad() {
         
@@ -53,6 +69,17 @@ class MapViewController: UIViewController,CLLocationManagerDelegate {
         
         // Create markers for all existing pins in DB
         showPins()
+        
+        // Make delay buttons invisible if isParent is true.
+        for button in delayButtons {
+            if (isParent) {
+                button.isHidden = true
+            }
+            else {
+                button.isHidden = false
+            }
+        }
+        
     }
     
 
@@ -79,6 +106,13 @@ class MapViewController: UIViewController,CLLocationManagerDelegate {
             pinDetailsController.pins = pins
             pinDetailsController.delegate = self
         }
+        if (segue.identifier == "scheduleSegue") {
+            let scheduleVC = segue.destination as! SVCViewController
+            scheduleVC.am = myam
+            print(myam)
+            print(mydelay)
+            scheduleVC.delay = mydelay
+        }
     }
     
     // MARK: function for create a marker pin on map
@@ -98,10 +132,15 @@ class MapViewController: UIViewController,CLLocationManagerDelegate {
     func drawBusRoute() {
         var origin = Location(lat:0,long:0)
         var dest = Location(lat:0,long:0)
-        
         for i in 0...stops.count-1 {
             print("i: \(i)")
-            createMarker(titleMarker: "Stop#\(i)", iconMarker: UIImage(named: "bus-stop")!, latitude: stops[i][0], longitude: stops[i][1])
+            if (i==0) {
+                createMarker(titleMarker: "Stop#\(i)", iconMarker: UIImage(named: "school")!, latitude: stops[i][0], longitude: stops[i][1])
+            }
+            else {
+                createMarker(titleMarker: "Stop#\(i)", iconMarker: UIImage(named: "bus-stop")!, latitude: stops[i][0], longitude: stops[i][1])
+            }
+            
             if (i != (stops.count - 1)) {
                 print("\(i) \(stops[i])")
                 origin = Location(lat:stops[i][0], long:stops[i][1])
@@ -170,7 +209,6 @@ class MapViewController: UIViewController,CLLocationManagerDelegate {
     //MARK: traffic buttons IBAction.
     @IBAction func trafficButtonPressed(_ sender: UIButton){
         print("traffic")
-        
         var type:String = String()
         var lat:Double = Double()
         var long:Double = Double()
@@ -180,26 +218,66 @@ class MapViewController: UIViewController,CLLocationManagerDelegate {
             type = "TrafficJam"
             lat = currentLoc.lat
             long = currentLoc.long
+            trafficClick.backgroundColor = UIColor.lightGray
         }
         else if sender.tag == 1 {
             type = "OutOfService"
-            lat = currentLoc.lat + 0.0006
-            long = currentLoc.long + 0.0006
+            lat = 37.300775 + 0.0006
+            long = -122.019745 + 0.0006
+            oosClick.backgroundColor = UIColor.lightGray
         }
         else if sender.tag == 2 {
             type="SubDriver"
-            lat = currentLoc.lat - 0.0003
-            long = currentLoc.long - 0.0003
+            lat = 37.303494 - 0.0003
+            long = -122.022544 - 0.0003
+            subdriverClick.backgroundColor = UIColor.lightGray
         }
-
-        let marker = createMarker(titleMarker: "\(titles[type]!) \(time)", iconMarker: GMSMarker.markerImage(with: colors[type]!), latitude: lat, longitude: long)
+        
+        var tm = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-MM-yyyy HH:mm:ss"
+        //dateFormatter.locale = tempLocale // reset the locale
+        let dateString = dateFormatter.string(from: tm)
+        print("\(dateString)")
+        let marker = createMarker(titleMarker: "\(titles[type]!) \(dateString)", iconMarker: GMSMarker.markerImage(with: colors[type]!), latitude: lat, longitude: long)
         
         
-        if let pin = Data.addPinToDB(type: type, route: myRoute, lat: lat, long: long, time: Date()) {
+        if let pin = Data.addPinToDB(type: type, route: myRoute, lat: lat, long: long, time: tm) {
             pins.append(pin)
             delayMarkers[pin] = marker
             print("added marker :\(delayMarkers)")
         }
+    }
+    
+    
+    @IBAction func delayButtonPressed(_ sender: UIButton) {
+        if sender.tag == 15 {
+            delay15.backgroundColor = UIColor.lightGray
+        }
+        if sender.tag == 30 {
+            delay30.backgroundColor = UIColor.lightGray
+        }
+        if sender.tag == 45 {
+            delay45.backgroundColor = UIColor.lightGray
+        }
+        mydelay = sender.tag
+        print("delay: \(mydelay)")
+        let date = Date()
+        let calendar = Calendar.current
+        let hour = calendar.component(.hour, from: date)
+        print(hour)
+        if (hour < 14)
+        {
+            myam = true
+        }
+        else {
+            myam = false
+        }
+       
+        print("delaybuttonPressed \(myam)")
+        print("delayButtonPressed \(mydelay)")
+        
+       
     }
 }
 

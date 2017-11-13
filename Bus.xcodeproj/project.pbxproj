@@ -23,11 +23,14 @@
 		13C3B8641FB5449900BBA4A0 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 13C3B8631FB5449900BBA4A0 /* Podfile */; };
 		13C3B8661FB6356600BBA4A0 /* sign_stop.png in Resources */ = {isa = PBXBuildFile; fileRef = 13C3B8651FB6356500BBA4A0 /* sign_stop.png */; };
 		5A50693B98C3675BAFBA9047 /* Pods_Bus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67620757C32B05F1C8346123 /* Pods_Bus.framework */; };
+		EB1D84BA1FB9370700723AA2 /* school.png in Resources */ = {isa = PBXBuildFile; fileRef = EB1D84B91FB9370400723AA2 /* school.png */; };
 		EB6E90441FB7B8F700D4A02C /* schoolbuss.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB6E90431FB7B8F700D4A02C /* schoolbuss.jpg */; };
 		EB6E90461FB7B91100D4A02C /* bus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB6E90451FB7B90F00D4A02C /* bus.jpg */; };
 		EB6E90481FB7B9C500D4A02C /* buss.png in Resources */ = {isa = PBXBuildFile; fileRef = EB6E90471FB7B9C500D4A02C /* buss.png */; };
 		EB6E904B1FB7CA3800D4A02C /* Emitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6E904A1FB7CA3800D4A02C /* Emitter.swift */; };
 		EB6E904D1FB7DC9F00D4A02C /* EntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6E904C1FB7DC9F00D4A02C /* EntryTableViewCell.swift */; };
+		EB9326821FB9420900BB242B /* SVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9326811FB9420900BB242B /* SVCViewController.swift */; };
+		EB9326841FB9455800BB242B /* sTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9326831FB9455800BB242B /* sTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,11 +75,14 @@
 		67620757C32B05F1C8346123 /* Pods_Bus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C581DFDACAAECBDD3B26675 /* Pods-Bus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bus/Pods-Bus.debug.xcconfig"; sourceTree = "<group>"; };
 		A0C5CF8C4ED620C45D038E6E /* Pods-Bus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bus.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bus/Pods-Bus.release.xcconfig"; sourceTree = "<group>"; };
+		EB1D84B91FB9370400723AA2 /* school.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = school.png; sourceTree = "<group>"; };
 		EB6E90431FB7B8F700D4A02C /* schoolbuss.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = schoolbuss.jpg; sourceTree = "<group>"; };
 		EB6E90451FB7B90F00D4A02C /* bus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bus.jpg; sourceTree = "<group>"; };
 		EB6E90471FB7B9C500D4A02C /* buss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buss.png; sourceTree = "<group>"; };
 		EB6E904A1FB7CA3800D4A02C /* Emitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emitter.swift; sourceTree = "<group>"; };
 		EB6E904C1FB7DC9F00D4A02C /* EntryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryTableViewCell.swift; sourceTree = "<group>"; };
+		EB9326811FB9420900BB242B /* SVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVCViewController.swift; sourceTree = "<group>"; };
+		EB9326831FB9455800BB242B /* sTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,22 +145,22 @@
 		13C3B8311FB5400400BBA4A0 /* Bus */ = {
 			isa = PBXGroup;
 			children = (
+				EB9326831FB9455800BB242B /* sTableViewCell.swift */,
 				13C3B8321FB5400400BBA4A0 /* AppDelegate.swift */,
 				13C3B8341FB5400400BBA4A0 /* MapViewController.swift */,
 				13C3A8DF1FB818EC00E79F96 /* PinDelegate.swift */,
 				13C3A8DD1FB7E30D00E79F96 /* Data.swift */,
 				13C3B8361FB5400400BBA4A0 /* Main.storyboard */,
 				1315A6D21FB69188004F7E3D /* PinDetailsViewController.swift */,
+				EB9326811FB9420900BB242B /* SVCViewController.swift */,
 				EB6E90491FB7C84D00D4A02C /* design */,
 				133247C61FB6882B00DEDE43 /* EntryViewController.swift */,
-<<<<<<< HEAD
 				13C3A8DB1FB7C53F00E79F96 /* bus-stop-pointer.png */,
-=======
 				EB6E904C1FB7DC9F00D4A02C /* EntryTableViewCell.swift */,
->>>>>>> bc8d47ff4b5bb6fa04df96f4aeebd3ae66ddf4fc
 				13C3B83C1FB5400400BBA4A0 /* Assets.xcassets */,
 				13C3B8651FB6356500BBA4A0 /* sign_stop.png */,
 				EB6E90451FB7B90F00D4A02C /* bus.jpg */,
+				EB1D84B91FB9370400723AA2 /* school.png */,
 				EB6E90471FB7B9C500D4A02C /* buss.png */,
 				EB6E90431FB7B8F700D4A02C /* schoolbuss.jpg */,
 				13C3B83E1FB5400400BBA4A0 /* LaunchScreen.storyboard */,
@@ -309,16 +315,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< HEAD
 				13C3A8DC1FB7C53F00E79F96 /* bus-stop-pointer.png in Resources */,
-=======
 				EB6E90481FB7B9C500D4A02C /* buss.png in Resources */,
->>>>>>> bc8d47ff4b5bb6fa04df96f4aeebd3ae66ddf4fc
 				13C3B8401FB5400400BBA4A0 /* LaunchScreen.storyboard in Resources */,
 				EB6E90461FB7B91100D4A02C /* bus.jpg in Resources */,
 				13C3B83D1FB5400400BBA4A0 /* Assets.xcassets in Resources */,
 				13C3B8641FB5449900BBA4A0 /* Podfile in Resources */,
 				13C3B8661FB6356600BBA4A0 /* sign_stop.png in Resources */,
+				EB1D84BA1FB9370700723AA2 /* school.png in Resources */,
 				EB6E90441FB7B8F700D4A02C /* schoolbuss.jpg in Resources */,
 				13C3B8381FB5400400BBA4A0 /* Main.storyboard in Resources */,
 			);
@@ -410,15 +414,13 @@
 				13C3B83B1FB5400400BBA4A0 /* Bus.xcdatamodeld in Sources */,
 				13C3A8DE1FB7E30D00E79F96 /* Data.swift in Sources */,
 				133247C71FB6882B00DEDE43 /* EntryViewController.swift in Sources */,
-<<<<<<< HEAD
 				13C3B8351FB5400400BBA4A0 /* MapViewController.swift in Sources */,
-=======
 				EB6E904B1FB7CA3800D4A02C /* Emitter.swift in Sources */,
+				EB9326821FB9420900BB242B /* SVCViewController.swift in Sources */,
 				EB6E904D1FB7DC9F00D4A02C /* EntryTableViewCell.swift in Sources */,
-				13C3B8351FB5400400BBA4A0 /* ViewController.swift in Sources */,
->>>>>>> bc8d47ff4b5bb6fa04df96f4aeebd3ae66ddf4fc
 				13C3B8331FB5400400BBA4A0 /* AppDelegate.swift in Sources */,
 				1315A6D31FB69188004F7E3D /* PinDetailsViewController.swift in Sources */,
+				EB9326841FB9455800BB242B /* sTableViewCell.swift in Sources */,
 				13C3A8E01FB818EC00E79F96 /* PinDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

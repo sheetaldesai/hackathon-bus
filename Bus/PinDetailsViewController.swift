@@ -44,7 +44,12 @@ extension PinDetailsViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "pinTableCell", for: indexPath)
         
         cell.textLabel?.text = pins[indexPath.row].type
-        cell.detailTextLabel?.text = "ABC"
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-MM-yyyy HH:mm:ss"
+        //dateFormatter.locale = tempLocale // reset the locale
+        let dateString = dateFormatter.string(from: pins[indexPath.row].time!)
+        print("\(dateString)")
+        cell.detailTextLabel?.text = dateString
         return cell
     }
     
